@@ -20,6 +20,12 @@ export var max_leap = 1000
 
 var moving = false
 var is_jumping = false
+var animating = false
+
+export var light_attack = 10
+export var medium_attack = 20
+export var heavy_attack = 30
+export var special = 25
 
 
 
@@ -28,6 +34,8 @@ func _physics_process(_delta):
 		
 	if direction < 0 and not $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = true
 	if direction > 0 and $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = false
+	if direction < 0 and $Attack/Slash.rotation_degrees != 180:  $Attack/Slash.rotation_degrees = 180
+	if direction > 0 and $Attack/Slash.rotation_degrees == 180: $Attack/Slash.rotation_degrees = 0
 	Backup.position = position
 
 		
@@ -47,6 +55,7 @@ func _unhandled_input(event):
 		direction = 1
 
 func set_animation(anim):
+	animating = true
 	if $AnimatedSprite.animation == anim: return
 	if $AnimatedSprite.frames.has_animation(anim): $AnimatedSprite.play(anim)
 	else: $AnimatedSprite.play()
@@ -54,3 +63,7 @@ func set_animation(anim):
 func die():
 	Backup.current = true
 	queue_free()
+
+
+func _on_AnimatedSprite_animation_finished():
+	animating = false

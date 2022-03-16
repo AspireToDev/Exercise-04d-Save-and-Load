@@ -17,3 +17,11 @@ func physics_process(_delta):
 		SM.set_state("Moving")
 	if Input.is_action_pressed("jump"):
 		SM.set_state("Jumping")
+	if Input.is_action_pressed("light_attack"):
+		SM.set_state("Light")
+	if Input.is_action_pressed("med_attack"):
+		SM.set_state("Medium")
+	if Input.is_action_pressed("heavy_attack"):
+		SM.set_state("Heavy")
+	if Input.is_action_pressed("special"):
+		SM.set_state("Special")
