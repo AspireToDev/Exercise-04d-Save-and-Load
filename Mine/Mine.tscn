@@ -24,4 +24,5 @@ playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 0, -29, -29, 28, 28.5, 26.5 )
+
 [connection signal="body_entered" from="." to="." method="_on_Mine_body_entered"]
