@@ -17,3 +17,7 @@ func _on_Load_pressed():
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+func _on_ToolButton_pressed():
+	get_tree().pause
