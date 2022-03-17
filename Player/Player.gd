@@ -9,6 +9,8 @@ var direction = 1
 
 var health = Global.save_data["general"]["health"]
 
+
+
 export var gravity = Vector2(0,30)
 
 export var move_speed = 20
@@ -73,7 +75,7 @@ func die():
 func _on_AnimatedSprite_animation_finished():
 	animating = false
 
-
-func _on_Area2D_body_entered(body):
-	if body_has_method("damage"):
-		Global.update_health(-d)
+func damage(d):
+	health -= d
+	if health <= 0:
+		die()

@@ -5,18 +5,13 @@ const SECRET = "C220 Is the Best!"
 var save_file = ConfigFile.new()
 
 onready var HUD = get_node_or_null("/root/Game/UI/HUD")
-onready var Coins = get_node_or_null("/root/Game/Coins")
-onready var Mines = get_node_or_null("/root/Game/Mines")
 onready var Game = load("res://Game.tscn")
-onready var Coin = load("res://Coin/Coin.tscn")
-onready var Mine = load("res://Mine/Mine.tscn")
+
 
 var save_data = {
 	"general": {
 		"score":0
 		,"health":100
-		,"coins":[]
-		,"mines":[]	
 	}
 }
 
