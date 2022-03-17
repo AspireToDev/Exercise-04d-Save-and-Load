@@ -7,6 +7,8 @@ var velocity = Vector2.ZERO
 var jump_power = Vector2.ZERO
 var direction = 1
 
+var health = Global.save_data["general"]["health"]
+
 export var gravity = Vector2(0,30)
 
 export var move_speed = 20
@@ -37,6 +39,8 @@ func _physics_process(_delta):
 	if direction < 0 and $Attack/Slash.rotation_degrees != 180:  $Attack/Slash.rotation_degrees = 180
 	if direction > 0 and $Attack/Slash.rotation_degrees == 180: $Attack/Slash.rotation_degrees = 0
 	Backup.position = position
+	if health <= 0: 
+		die()
 
 		
 
@@ -60,6 +64,7 @@ func set_animation(anim):
 	if $AnimatedSprite.frames.has_animation(anim): $AnimatedSprite.play(anim)
 	else: $AnimatedSprite.play()
 
+
 func die():
 	Backup.current = true
 	queue_free()
@@ -67,3 +72,8 @@ func die():
 
 func _on_AnimatedSprite_animation_finished():
 	animating = false
+
+
+func _on_Area2D_body_entered(body):
+	if body_has_method("damage"):
+		Global.update_health(-d)
