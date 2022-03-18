@@ -1,18 +1,17 @@
-# Exercise-04d-Save-and-Load
+# Project 4- 2D Platformer
 
 Exercise for MSCH-C220
 
-The fourth exercise for the 2D Platformer project, exploring save and load (in two projects).
+The final product for the 2D Platforming project, adapting combat from Street fighter style games. 
 
 ## Implementation
 
 Built using Godot 3.4.2
 
-The player sprite is an adaptation of [MV Platformer Male](https://opengameart.org/content/mv-platformer-male-32x64) by MoikMellah. CC0 Licensed.
+The player sprite is an adaptation of https://chierit.itch.io/elementals-metal-bladekeeper by Chierit. License CC-BY 4.0
 
-The coin sprite is provided by Kenney.nl: [https://kenney.nl/assets/puzzle-pack-2](https://kenney.nl/assets/puzzle-pack-2).
+The parallax background is from: https://ansimuz.itch.io/mountain-dusk-parallax-background by Anismuz. License CC-BY 4.0
 
-The explosion animation is also adapted from Kenney.nl: [https://kenney.nl/assets/tanks](https://kenney.nl/assets/tanks).
 
 
 ## References
@@ -22,7 +21,7 @@ For more information about save and load in Godot, visit the Godot documentation
 
 ## Future Development
 
-None
+Still working on Saves, Levels, and Enemies. 
 
 
 ## Created by 
