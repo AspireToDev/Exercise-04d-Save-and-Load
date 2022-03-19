@@ -6,7 +6,7 @@ func _ready():
 
 
 func _on_Continue_pressed():
-	var _target = get_tree().change_scene("res://Level2.tscn")
+	var _target = get_tree().change_scene("res://Game.tscn")
 	Global._ready()
 
 
