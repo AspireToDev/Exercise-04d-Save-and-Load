@@ -150,7 +150,7 @@ points = PoolVector2Array( 77, 81, 0, 81, 0, 2, 77, 2 )
 4/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 52, 42 )
+extents = Vector2( 52, 287.5 )
 
 [node name="Game" type="Node2D"]
 
@@ -350,7 +350,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
-position = Vector2( 13, 32 )
+position = Vector2( 13, -213.5 )
 shape = SubResource( 9 )
 
 [connection signal="body_entered" from="Enemy/Area2D" to="Enemy" method="_on_Area2D_body_entered"]

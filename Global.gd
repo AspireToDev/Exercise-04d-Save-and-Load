@@ -6,6 +6,7 @@ var save_file = ConfigFile.new()
 
 onready var HUD = get_node_or_null("/root/Game/UI/HUD")
 onready var Game = load("res://Game.tscn")
+onready var Level2 = load("res://Level2.tscn")
 
 
 var save_data = {
